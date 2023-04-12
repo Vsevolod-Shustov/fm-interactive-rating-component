@@ -11,6 +11,8 @@
     --bg-card-start:hsl(220, 36%, 20%);
     --bg-card-end:hsl(220,33%,15%);
     --bg-star-icon:hsl(210, 32%,22%);
+    --rating-button-hover:hsl(214, 18%, 60%);
+    --bg-badge-selection:hsl(212,36%,24%);
     font-size:16px;
 }
 
@@ -45,6 +47,7 @@ main {
     background: linear-gradient(var(--bg-card-start),var(--bg-card-end));
 }
 
+
 .image-star {
     background-color: var(--bg-star-icon);
     padding:10px;
@@ -56,6 +59,7 @@ h1 {
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom:0.5rem;
+    color:white;
 }
 
 p {
@@ -78,6 +82,15 @@ p {
     justify-content: center;
     background-color: var(--bg-star-icon);
     border-radius: 50%;
+    cursor:pointer;
+}
+.rating-button:hover {
+    background-color: var(--rating-button-hover);
+    color:white;
+}
+.rating-button.selected {
+    background-color: var(--orange);
+    color:white;
 }
 
 .submit {
@@ -88,8 +101,36 @@ p {
     text-align: center;
     border:none;
     width:100%;
+    cursor:pointer;
+}
+.submit:hover {
+    color:var(--orange);
+    background-color:white;
 }
 
-#state-thankyou {
+#state-initial {
     display:none;
+}
+#state-thankyou {
+    display:block;
+}
+
+.state-thankyou-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge-selection {
+    background-color: var(--bg-badge-selection);
+    color:orange;
+    font-size:0.9rem;
+    border-radius:1em;
+    padding:0.5rem 1rem;
+    display:inline-block;
+    margin: 1rem 0 1.5rem;
+}
+
+.state-thankyou-wrapper p {
+    text-align: center;
 }
