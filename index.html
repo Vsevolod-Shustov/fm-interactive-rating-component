@@ -10,11 +10,13 @@
 
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/style.css" />
+
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
   <main>
     <div class="component">
-      <div id="state-initial">
+      <div id="state-initial" class="visible">
         <div class="image-star-container">
           <img class="image-star" src="images/icon-star.svg" alt="star icon">
         </div>
@@ -26,7 +28,7 @@
           to help us improve our offering!
         </p>
       
-        <div class="rating-buttons">
+        <div class="rating-buttons" id="rating-buttons">
           <div class="rating-button" data-rating="1">1</div>
           <div class="rating-button" data-rating="2">2</div>
           <div class="rating-button" data-rating="3">3</div>
@@ -37,12 +39,12 @@
         <button id="submit" class="submit">Submit</button>
         
       </div>
-      <div id="state-thankyou">
+      <div id="state-thankyou" class="hidden">
         <div class="state-thankyou-wrapper">
           <div class="image-thankyou-container">
             <img class="image-thankyou" src="images/illustration-thank-you.svg" alt="thank you">
           </div>
-          <div class="badge-selection">You selected <!-- Add rating here --> out of 5</div>
+          <div class="badge-selection">You selected <span id="selectedRating">0</span> out of 5</div>
 
           <h1>Thank you!</h1>
         

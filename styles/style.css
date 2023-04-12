@@ -108,11 +108,11 @@ p {
     background-color:white;
 }
 
-#state-initial {
-    display:none;
-}
-#state-thankyou {
+.visible {
     display:block;
+}
+.hidden {
+    display:none;
 }
 
 .state-thankyou-wrapper {
