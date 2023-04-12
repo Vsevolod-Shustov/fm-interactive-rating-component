@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange:hsl(25, 97%, 53%);
+    --light-grey:hsl(217, 12%, 63%);
+    --medium-grey:hsl(216, 12%, 54%);
+    --dark-blue:hsl(213, 19%, 18%);
+    --very-dark-blue:hsl(216, 12%, 8%);
+
+    --background:hsl(220,13%,9%);
+    --bg-card-start:hsl(220, 36%, 20%);
+    --bg-card-end:hsl(220,33%,15%);
+    --bg-star-icon:hsl(210, 32%,22%);
+    font-size:16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size:0.9375rem;
+    font-family: Overpass, Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--background);
+    color: var(--light-grey);
+    padding: 1rem 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+}
+
+.component{
+    padding:1.5rem;
+    width:100%;
+    max-width:320px;
+    border-radius: 0.75rem;
+    background: linear-gradient(var(--bg-card-start),var(--bg-card-end));
+}
+
+.image-star {
+    background-color: var(--bg-star-icon);
+    padding:10px;
+    border-radius:50%;
+    margin-bottom:1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom:0.5rem;
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom:1.5rem;
+    letter-spacing:-1px;
+}
+
+.rating-buttons {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.rating-button {
+    width:2.5rem;
+    height:2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-star-icon);
+    border-radius: 50%;
+}
+
+.submit {
+    background-color: var(--orange);
+    color:white;
+    border-radius: 1.5rem;
+    padding:1rem;
+    text-align: center;
+    border:none;
+    width:100%;
+}
+
+#state-thankyou {
+    display:none;
+}
